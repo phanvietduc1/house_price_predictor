@@ -24,7 +24,7 @@ class _HomeState extends State<Result> {
   Future<void> predict() async {
     try {
       String url =
-          'https://flutteruse.herokuapp.com/predict/?areaincome=${widget.areaincome}&areahouseage=${widget.areahouseage}&areanorooms=${widget.areanorooms}&areanobedrooms=${widget.areanobedrooms}&areapopulation=${widget.areapopulation}';
+          'https://house-price-predictor2.herokuapp.com/predict/?areaincome=${widget.areaincome}&areahouseage=${widget.areahouseage}&areanorooms=${widget.areanorooms}&areanobedrooms=${widget.areanobedrooms}&areapopulation=${widget.areapopulation}';
       Response data = await get(url);
       setState(() {
         prediction = jsonDecode(data.body)['prediction'];
